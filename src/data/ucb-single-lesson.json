@@ -1,0 +1,144 @@
+{
+  "intro": {
+    "title": "A Bíblia Sagrada",
+    "description": "A Bíblia é um livro diferente. Na verdade, trata-se de uma pequena biblioteca, composta de 66 livros escritos por cerca de 40 autores das mais variadas culturas, origens e ocupações, durante um período de 1600 anos. Milhares de pessoas já deram a vida, literalmente, em defesa das verdades nela contidas. Por abraçarem essas verdades, blasfemos se tornaram reverentes; ébrios se tornaram sóbrios; criminosos se tornaram confiáveis, ladrões se tornaram honestos; adúlteros se tornaram puros. O que torna a Bíblia um livro tão especial? De onde vem seu poder? Que valor tem ela para o homem atual? Essas perguntas serão respondidas neste estudo.",
+    "time": "10 minutos",
+    "level": "Iniciante"
+  },
+  "questions": [
+    {
+      "versicles": [
+        {
+          "versicleId": "joao-1717",
+          "bibleVersicle": "João 17:17",
+          "versicleText": "Santifica-os na tua verdade; a tua palavra é a verdade.",
+          "autoOpen": false
+        },
+        {
+          "versicleId": "isaias-407",
+          "bibleVersicle": "Isaías 40:7",
+          "versicleText": "Seca-se a erva, e cai a flor, porém a palavra de nosso Deus subsiste eternamente.\r\n",
+          "autoOpen": false
+        },
+        {
+          "versicleId": "joao-832",
+          "bibleVersicle": "João 8:32",
+          "versicleText": "E conhecereis a verdade, e a verdade vos libertará.",
+          "autoOpen": false
+        }
+      ],
+      "description": "A Bíblia é nossa regra de fé e prática. Ela é a fonte real de toda a verdade. Sem ela andamos nas trevas que o pecado nos trouxe. Embora o mundo contemporâneo seja relativista quanto aos ensinos bíblicos, ela não deixa de exercer seu poder transformador e santificador na vida do leitor. \"Seca-se a erva e cai a flor, mas a Palavra de Deus permanece para sempre\" (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"isaias-407\">Is 40:7</a>). Jesus disse: \"Conhecereis a verdade e a verdade vos libertará\" (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-832\">Jo 8:32</a>)",
+      "type": "complete",
+      "questionTitle": "Como Jesus considerava a Bíblia?",
+      "questionVersicles": "Leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-1717\">João 17:17</a> e complete a frase:",
+      "answerDescription": "Santifica-os na verdade, a Tua Palavra é a {{0}}.",
+      "answers": [
+        {
+          "position": 4,
+          "word": "Decisão",
+          "value": false
+        },
+        {
+          "position": 1,
+          "word": "Mentira",
+          "value": false
+        },
+        {
+          "position": 2,
+          "word": "Indecisão",
+          "value": false
+        },
+        {
+          "position": 3,
+          "word": "Incoerência",
+          "value": false
+        },
+        {
+          "position": 0,
+          "word": "VERDADE",
+          "value": true
+        }
+      ],
+      "rightAnswer": "1-VERDADE"
+    },
+    {
+      "versicles": [
+        {
+          "versicleId": "",
+          "bibleVersicle": "",
+          "versicleText": "",
+          "autoOpen": false
+        }
+      ],
+      "description": "Leitura complementar:\r\n1. Nisto Cremos: Crença 1.\r\n2. Tratado de Teologia: Capítulos 2-3.\r\n3. Ellen G. White: Educação. capítulos 13-20 (Casa Publicadora Brasileira).\r\n4. Ellen G. White: O Grande Conflito. Capítulos 15 e 37 (Casa Publicadora Brasileira).\r\n5. Ellen G. White: Testemunhos Seletos. vol. 2, capítulo 42 (Casa Publicadora Brasileira).\r\n6. Emilson Reis. Introdução Geral à Bíblia: como a Bíblia foi escrita e chegou até nós (Privilégio Artes\r\nGráficas).\r\n7. George W. Reid. Compreendendo as Escrituras: Uma Abordagem Adventista (Unaspress).\r\n",
+      "type": "true-false",
+      "questionTitle": "Compromisso de Fé",
+      "questionVersicles": "",
+      "answers": [
+        {
+          "text": "Aceito toda a Bíblia como regra de fé para minha vida.",
+          "value": "true"
+        },
+        {
+          "text": "Quero dedicar tempo cada dia para estudar a Bíblia.",
+          "value": "true"
+        },
+        {
+          "text": "Farei todo o possível para colocar em prática seus ensinos em minha vida.",
+          "value": "true"
+        }
+      ],
+      "rightAnswer": "V, V, V"
+    },
+    {
+      "versicles": [
+        {
+          "versicleId": "efesios-28-9",
+          "bibleVersicle": "Efésios 2:8-9",
+          "versicleText": "Porque pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus.\r\nNão vem das obras, para que ninguém se glorie;",
+          "autoOpen": false
+        },
+        {
+          "versicleId": "galatas-216",
+          "bibleVersicle": "Gálatas 2:16",
+          "versicleText": " Sabendo que o homem não é justificado pelas obras da lei, mas pela fé em Jesus Cristo, temos também crido em Jesus Cristo, para sermos justificados pela fé em Cristo, e não pelas obras da lei; porquanto pelas obras da lei nenhuma carne será justificada.",
+          "autoOpen": false
+        },
+        {
+          "versicleId": "romanos-829",
+          "bibleVersicle": "Romanos 8:29",
+          "versicleText": "Porque os que dantes conheceu também os predestinou para serem conformes à imagem de seu Filho, a fim de que ele seja o primogênito entre muitos irmãos.",
+          "autoOpen": false
+        },
+        {
+          "versicleId": "deuteronomio-301920",
+          "bibleVersicle": "Deuteronômio 30:19,20",
+          "versicleText": "Os céus e a terra tomo hoje por testemunhas contra vós, de que te tenho proposto a vida e a morte, a bênção e a maldição; escolhe pois a vida, para que vivas, tu e a tua descendência,\r\nAmando ao Senhor teu Deus, dando ouvidos à sua voz, e achegando-te a ele; pois ele é a tua vida, e o prolongamento dos teus dias; para que fiques na terra que o Senhor jurou a teus pais, a Abraão, a Isaque, e a Jacó, que lhes havia de dar.",
+          "autoOpen": false
+        }
+      ],
+      "description": "Muitos imaginam que podem alcançar a salvação por meio de campanhas beneficentes, doações, penitências, obras humanitárias ou boa conduta. Essas atitudes são boas e recomendadas, mas a salvação é um presente de Deus, recebido através da fé e não depende de nós. A Bíblia rejeita a ideia de que alguns foram escolhidos para a salvação e outros para a perdição, mas enfatiza que, em Cristo, todos nós fomos predestinados à salvação, que depende da decisão do ser humano (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"romanos-829\">Rm 8:29</a>; <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"deuteronomio-301920\">Dt 30:19 e 20</a>).",
+      "type": "radio",
+      "questionTitle": "A salvação depende de nossas boas obras? ",
+      "questionVersicles": "leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"efesios-28-9\">Efésios 2:8-9</a>; <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"galatas-216\">Gálatas 2:16</a> e marque a resposta correta:",
+      "answers": [
+        {
+          "text": "Sim",
+          "value": "Sim"
+        },
+        {
+          "text": "Não",
+          "value": "true"
+        }
+      ],
+      "rightAnswer": "Não"
+    }
+  ],
+  "participe": {
+    "description": "lalala",
+    "references": [
+      { "reference-1": "reference 1" },
+      { "reference-2": "reference 2" }
+    ]
+  }
+}

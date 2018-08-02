@@ -1,0 +1,45 @@
+{
+  "en": {
+  	"startLesson": "Start",
+
+    "introTime": "Time",
+    "introLevel": "Level",
+    "introFinishedLabel": "Finished",
+    "introFinishedPeople": "people",
+
+    "questionButtonVerify": "Verify",
+    "questionButtonContinue": "Continue",
+    "questionDragDropInstruction": "Answer dragging the word to the gap:",
+    "questionFeedbackTitleCorrect": "Correct",
+    "questionFeedbackTitleWrong": "Oops...",
+    "questionFeedbackDescriptionCorrect": "You're doing good!",
+    "questionFeedbackDescriptionWrong": "You missed",
+    "questionFeedbackPerformanceSingular": "wrong option.",
+    "questionFeedbackPerformancePlural": "wrong options.",
+    "facebookTeacher": "Chat in Messenger",
+    "whatsappTeacher": "Chat in Whatsapp",
+
+    "endlessonLowScoreTitle": "Oops...",
+    "endlessonRegularScoreTitle": "You're doing good!",
+    "endlessonHighScoreTitle": "Congratulations!",
+    "endlessonLowPerformance": "You finished this lesson with no correct answers!",
+    "endLessonRegularPerformancePrefix": "You completed this lesson with only",
+    "endLessonHighPerformancePrefix": "You completed this lesson with",
+    "endLessonPerformanceSuffixSingular": "correct answer!",
+    "endLessonPerformanceSuffix": "correct answers!",
+    "endlessonTryAgain": "Do you want to try it again?",
+
+    "endlessonFormLearnMore": "Do you want to know even more?",
+    "endlessonFormLearnMoreDescription": "We have a team to chat with you",
+    "endlessonFormName": "Full name",
+    "endlessonFormEmail": "E-mail",
+    "endlessonFormTelephone": "Telephone",
+    "endlessonFormMandatoryFields": "All fields are mandatory.",
+    "endlessonFormSubmit": "Subscribe",
+
+    "endlessonAllLessonsButton": "All lessons",
+    "enlessonFeedbackTitle": "Done!",
+    "enlessonFeedbackDescription": "We have your info. We get in touch soon.",
+    "endlessonLearnMoreBrand": "Learn more"
+  }
+}

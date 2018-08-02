@@ -1,0 +1,45 @@
+{
+  "pt": {
+  	"startLesson": "Começar",
+
+    "introTime": "Tempo",
+    "introLevel": "Dificuldade",
+    "introFinishedLabel": "Já fizeram",
+    "introFinishedPeople": "pessoas",
+
+    "questionButtonVerify": "Verificar",
+    "questionButtonContinue": "Continuar",
+    "questionDragDropInstruction": "Arraste a palavra até a lacuna para responder:",
+    "questionFeedbackTitleCorrect": "Correto",
+    "questionFeedbackTitleWrong": "Ops...",
+    "questionFeedbackDescriptionCorrect": "Você está indo bem!",
+    "questionFeedbackDescriptionWrong": "Você errou",
+    "questionFeedbackPerformanceSingular": "opção errada.",
+    "questionFeedbackPerformancePlural": "opções erradas.",
+    "facebookTeacher": "Conversar pelo Messenger",
+    "whatsappTeacher": "Conversar pelo Whatsapp",
+
+    "endlessonLowScoreTitle": "Ops...",
+    "endlessonRegularScoreTitle": "Você está indo bem!",
+    "endlessonHighScoreTitle": "Parabéns!",
+    "endlessonLowPerformance": "Você completou esta lição sem nenhuma resposta correta!",
+    "endLessonRegularPerformancePrefix": "Você completou esta lição com apenas",
+    "endLessonHighPerformancePrefix": "Você completou esta lição com",
+    "endLessonPerformanceSuffixSingular": "resposta correta!",
+    "endLessonPerformanceSuffix": "respostas corretas!",
+    "endlessonTryAgain": "Quer tentar novamente?",
+
+    "endlessonFormLearnMore": "Quer saber ainda mais?",
+    "endlessonFormLearnMoreDescription": "Temos uma equipe pra bater um papo com você.",
+    "endlessonFormName": "Nome completo",
+    "endlessonFormEmail": "E-mail",
+    "endlessonFormTelephone": "Telefone",
+    "endlessonFormMandatoryFields": "Todos os campos do formulário são obrigatórios.",
+    "endlessonFormSubmit": "Cadastrar",
+
+    "endlessonAllLessonsButton": "Todas as lições",
+    "enlessonFeedbackTitle": "Prontinho!",
+    "enlessonFeedbackDescription": "Seus contatos estão com a gente. Entraremos em contato em breve.",
+    "endlessonLearnMoreBrand": "Saiba mais"
+  }
+}
