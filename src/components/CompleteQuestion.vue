@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div v-if="currentVersicle !== null"  class="show ucb-bible-versicle">
+    <div v-if="currentVersicle !== null" class="show ucb-bible-versicle" :class="currentVersicle.appendixType">
       <button class="dismiss-versicles" v-on:click="hideVersicles"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="#000000" fill-opacity=".158" fill-rule="evenodd" d="M1402,17 C1390.95,17 1382,25.95 1382,37 C1382,48.05 1390.95,57 1402,57 C1413.05,57 1422,48.05 1422,37 C1422,25.95 1413.05,17 1402,17 Z M1412,44.17 L1409.17,47 L1402,39.83 L1394.83,47 L1392,44.17 L1399.17,37 L1392,29.83 L1394.83,27 L1402,34.17 L1409.17,27 L1412,29.83 L1404.83,37 L1412,44.17 Z" style="mix-blend-mode:multiply" transform="translate(-1382 -17)"/></svg></button>
       <div>
-          <strong v-if="currentVersicle.bibleVersicle">{{ currentVersicle.bibleVersicle }}</strong>
-          <div class="ucb-bible-versicle-content" v-html="currentVersicle.versicleText"></div>
+          <strong v-if="currentVersicle.appendixTitle">{{ currentVersicle.appendixTitle }}</strong>
+          <div class="ucb-bible-versicle-content" v-html="currentVersicle.appendixContent"></div>
       </div>
     </div>
 
     <div class="ucb-question complete-question">
       <h2>{{ question.title }}</h2>
-      <p class="versicles-trigger" v-html="question.questionVersicles"></p>
+      <p class="versicles-trigger" v-html="question.questionAppendix"></p>
       <span v-for='(ask, index) in repeatDropZone'>
         {{ask}}
         <div class="drag" :id="'list_' + index" v-bind:class="borderFeedback[index]" v-if="repeatDropZone.length-1 > index">
@@ -131,16 +131,17 @@ export default {
         title: this.singleQuestion.questionTitle,
         ask: this.singleQuestion.answerDescription,
         answers: this.singleQuestion.answers,
-        versicles: this.singleQuestion.versicles,
+        appendix: this.singleQuestion.appendix,
         description: this.singleQuestion.description,
         countTrueAnswers: this.singleQuestion.answers,
-        questionVersicles: this.singleQuestion.questionVersicles
+        questionAppendix: this.singleQuestion.questionAppendix
       },
       feedback: null,
       selected: 'vazio',
       showVersiclesClass: 'hide',
       descriptionVersicleTrigger: '',
-      versicleId: null,
+      appendixId: null,
+      appendixType: null,
       list: { },
       allAnswerChecked: false,
       borderFeedback: [],
@@ -192,7 +193,6 @@ export default {
             Object.entries(this.question.countTrueAnswers).forEach(([index2, item2]) => {
               if (item2.position === positionQuestion) {
                 this.list['list_' + positionQuestion][0].word = item2.word
-                console.log(document.getElementById('list_' + positionQuestion))
                 document.getElementById('list_' + positionQuestion).classList.add('border__invalid')
               }
             })
@@ -214,9 +214,9 @@ export default {
         this.$root.$emit('answer-correct')
       }
     },
-    showVersicles: function () {
-      this.showVersiclesClass = 'show'
-    },
+    // showVersicles: function () {
+    //   this.showVersiclesClass = 'show'
+    // },
     hideVersicles: function () {
       this.currentVersicle = null
     },
@@ -229,10 +229,10 @@ export default {
     },
     versicleArea: function () {},
     openVersicleContent: function (e) {
-      let versicleId = e.target.getAttribute('data-versicle')
-      for (let index = 0; index < this.question.versicles.length; ++index) {
-        if (this.question.versicles[index].versicleId === versicleId) {
-          this.currentVersicle = this.question.versicles[index]
+      let appendixId = e.target.getAttribute('data-versicle')
+      for (let index = 0; index < this.question.appendix.length; ++index) {
+        if (this.question.appendix[index].appendixId === appendixId) {
+          this.currentVersicle = this.question.appendix[index]
         }
       }
     },
@@ -270,9 +270,9 @@ export default {
       this.list['list_' + i] = []
     }
 
-    for (let i = 0; i < this.question.versicles.length; i++) {
-      if (this.question.versicles[i].autoOpen === true) {
-        this.currentVersicle = this.question.versicles[i]
+    for (let i = 0; i < this.question.appendix.length; i++) {
+      if (this.question.appendix[i].autoOpen === true) {
+        this.currentVersicle = this.question.appendix[i]
       }
     }
   },
