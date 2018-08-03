@@ -6,11 +6,11 @@ h1 {
   margin-bottom: 25px;
   font-weight: 900;
   font-size: 60px;
-  color: $primary-colour;
+  color: $primary-color;
 }
 h2 {
   font-weight: 900;
-  color: #000;
+  color: $darkest-text-color;
 }
 ul {
   list-style-type: none;
@@ -22,14 +22,14 @@ li {
 }
 a {
   font-weight: 900;
-  color: #000;
+  color: $darkest-text-color;
   &:hover {
     text-decoration: none;
-    color: #000;
+    color: $darkest-text-color;
   }
 }
 .normal {
-  background-color: grey;
+  background-color: $container-bg;
 }
 .show {
   display: block;
@@ -70,7 +70,7 @@ a {
     cursor: pointer;
     font-weight: 900;
     font-size: 22px;
-    color: #fff;
+    color: $lightest-text-color;
   }
 }
 
@@ -84,38 +84,38 @@ a {
   cursor: pointer;
   font-weight: 900;
   font-size: 22px;
-  color: #fff;
+  color: $lightest-text-color;
 }
 
 .feedback-wrong {
   .answer-feedback {
-    background: rgba(237,196,196,0.96);
-    color: #e22d2d;
+    background-color: $error-bg;
+    color: $error;
     h5 {
-      color: #e22d2d;
+      color: $error;
     }
   }
 }
 .wrong {
   button {
-    background-color: #e22d2d;
+    background-color: $error;
   }
 }
 .feedback-right {
   .answer-feedback {
-    background: rgba(225,236,211,0.96);
-    color: $btn-success;
+    background-color: $success-bg;
+    color: $success;
     h5 {
-      color: $btn-success;
+      color: $success;
     }
   }
 }
 .right {
   button {
-    background-color: $btn-success;
+    background-color: $success;
   }
   &.verify-answer {
-    background: #d1e2be;
+    background-color: $success-bg;
   }
 }
 
@@ -137,7 +137,7 @@ a {
         justify-content: center;
         align-items: center;
         font-weight: 400;
-        color: #fff;
+        color: $lightest-text-color;
         svg {
           margin-right: 5px;
         }
@@ -161,7 +161,7 @@ a {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background: #fff;
+    background-color: $lightest-container-bg;
   }
   .arrow {
     align-self: flex-end;
@@ -179,7 +179,7 @@ a {
   width: 50vw;
   opacity: .9;
   z-index: 6;
-  background: #fff;
+  background-color: $lightest-container-bg;
 }
 
 .ucb-modal {
@@ -189,14 +189,14 @@ a {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000;
-  background: $body-bg;
+  color: $darkest-text-color;
+  background-color: $container-bg;
   h5 {
     position: absolute;
     top: 20px;
     font-weight: 900;
     font-size: 20px;
-    color: rgba(0,0,0, .16);
+    color: $light-text-color;
   }
   p {
     font-size: 22px;
@@ -218,14 +218,14 @@ a {
       font-weight: 900;
       font-size: 14px;
       text-transform: uppercase;
-      color: $primary-colour;
+      color: $primary-color;
     }
     svg {
       margin-right: 5px;
     }
     div {
       font-size: 25px;
-      color: $secondary-colour;
+      color: $secondary-color;
     }
     .lesson-info-title {
       display: flex;
@@ -241,11 +241,11 @@ a {
   border-radius: 42px;
   font-size: 36px;
   font-weight: 900;
-  color: #fff;
-  background-color: $primary-colour;
+  color: $lightest-text-color;
+  background-color: $primary-color;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $lightest-text-color;
   }
 }
 .ucb-bible-versicle {
@@ -257,8 +257,8 @@ a {
   height: 100%;
   padding: 80px;
   overflow: scroll;
-  background: $versicle-bg;
-  color: $versicle-text-color;
+  background-color: $callout-bg;
+  color: $dark-text-color;
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.35);
   p {
     font-size: 16px;
@@ -282,14 +282,14 @@ a {
     border: 0;
     border-radius: 50%;
     outline: none;
-    background: rgba(255,255,255,.8);
+    background-color: $light-alpha-container-bg;
     svg {
       position: absolute;
       top: 0;
       right: 0;
     }
     &:hover {
-      background: rgba(255,255,255,.8);
+      background-color: $light-text-color;
     }
   }
 }
@@ -305,7 +305,7 @@ a {
       line-height: 1.2;
       font-weight: 700;
       font-size: 34px;
-      color: #777d7f;
+      color: $dark-text-color;
     }
     div + div {
       margin-left: 20px;
@@ -313,11 +313,10 @@ a {
   }
   .teste {
     position: relative;
-    background-color: blue;
     height: 100vh;
     margin: 0 -60px -80px;
     padding: 0 60px;
-    background-color: #e4eaec;
+    background-color: $light-container-bg;
     &:before {
       content: '';
       display: block;
@@ -328,15 +327,19 @@ a {
       width: 0;
       border-left: 0vw solid transparent;
       border-right: 70vw solid transparent;
-      border-bottom: 70px solid #e4eaec;
-      background-color: $body-bg;
+      border-bottom-width: 70px;
+      border-bottom-style: solid;
+      border-bottom-color: $light-container-bg;
+      background-color: $container-bg;
     }
   }
   form {
     input {
       padding: 10px 20px;
       width: 100%;
-      border: solid 2px #acadad;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $text-color;
       border-radius: 10px;
       font-weight: 900;
       font-size: 20px;
@@ -352,11 +355,11 @@ a {
         border-radius: 42px;
         font-size: 36px;
         font-weight: 900;
-        color: #fff;
-        background-color: $primary-colour;
+        color: $lightest-text-color;
+        background-color: $primary-color;
         &:hover {
           text-decoration: none;
-          color: #fff;
+          color: $lightest-text-color;
         }
       }
     }
@@ -368,26 +371,28 @@ a {
       margin-top: 69px;
       margin-bottom: 35px;
       padding: 5px 55px;
-      border: solid 2px #acadad;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $text-color;
       border-radius: 35px;
       cursor: pointer;
       font-weight: 900;
       font-size: 22px;
-      color: #acadad;
+      color: $text-color;
       background-color: transparent;
       &:hover {
-        color: #fff;
-        border-color: $primary-colour;
-        background-color: $primary-colour;
+        color: $lightest-text-color;
+        border-color: $primary-color;
+        background-color: $primary-color;
       }
     }
   }
 }
 .ucb-try-again {
-  color: #acadad;
+  color: $text-color;
   &:hover {
     text-decoration: underline;
-    color: #777d7f;
+    color: $dark-text-color;
   }
 }
 .lesson-intro, .ucb-question {
@@ -462,7 +467,9 @@ a {
         top: -69px;
         border-left: 0vw solid transparent;
         border-right: 110vw solid transparent;
-        border-bottom: 70px solid #e4eaec;
+        border-bottom-width: 70px;
+        border-bottom-style: solid;
+        border-bottom-color: $light-container-bg;
       }
     }
   }
@@ -486,7 +493,7 @@ a {
       bottom: 0;
       height: 60vh;
       &.show {
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-name: slidein;
       }
       @keyframes slidein {
@@ -499,7 +506,7 @@ a {
         }
       }
       &.hideVersicle {
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-name: slideout;
       }
       @keyframes slideout {

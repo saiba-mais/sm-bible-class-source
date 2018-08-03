@@ -315,6 +315,15 @@
 
 }());
 
+function serialize(obj) {
+  var str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
+}
+
 var ucbBibleStudyLessonModal = new Modal({});
 
 var triggerButton = document.querySelectorAll('.saiba-mais-widget');
@@ -322,9 +331,17 @@ var triggerButton = document.querySelectorAll('.saiba-mais-widget');
 for (var i = 0 ; i < triggerButton.length; i++) {
 
   triggerButton[i].addEventListener('click', function() {
-    var language = this.getAttribute('data-lang');
-    var currentLesson = this.getAttribute('data-lesson');
-    var lessonURL = 'http://192.168.1.89:5000/?lesson=' + currentLesson + '&lang=' + language;
+
+    var queryMap = window.bibleClassSettings;
+    for (var i = 0; i < this.attributes.length; i++){
+      var attr = this.attributes[i];
+      if (attr.name.substring(0, 5) == 'data-'){
+        queryMap[attr.name.substring(5)] = attr.value;
+      }
+    }
+
+    var lessonURL = 'http://192.168.1.89:5000/?' + serialize(queryMap);
+    // var lessonURL = 'http://localhost:5000/?lesson=' + currentLesson + '&lang=' + language;
     ucbBibleStudyLessonModal.open(lessonURL);
   });
 }

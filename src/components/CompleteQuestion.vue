@@ -44,7 +44,7 @@
     <div class="contact-teacher">
       <ul v-bind:class="showTeacherAssistent">
         <li class="facebook-teacher">
-          <a href="https://m.me/adventistassp" target="_blank">
+          <a v-bind:href="fbMessengerAssistent" target="_blank">
             <svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs></defs>
               <g id="Widget/Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -146,7 +146,8 @@ export default {
       allAnswerChecked: false,
       borderFeedback: [],
       wrongAnswerCounter: 0,
-      showTeacherAssistent: 'hide'
+      showTeacherAssistent: 'hide',
+      fbMessengerAssistent: 'https://m.me/' + this.$root.$data.messenger
     }
   },
   computed: {
@@ -251,7 +252,7 @@ export default {
       }
     },
     whatsappMessage: function () {
-      window.open('https://api.whatsapp.com/send?phone=554888080980')
+      window.open('https://api.whatsapp.com/send?phone=' + this.$root.$data.whatsapp)
     }
   },
   watch: {

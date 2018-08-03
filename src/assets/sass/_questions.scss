@@ -13,7 +13,7 @@
 		.completed {
 			height: 100%;
 			width: 100%;
-			background-color: $primary-colour;
+			background-color: $primary-color;
 		}
 	}
 }
@@ -31,7 +31,9 @@
 		display: block;
 		margin: 0;
 		padding: 5px 15px;
-		border: solid 2px $light-grey;
+		border-width: 2px;
+		border-style: solid;
+		border-color: $border-color;
 		border-radius: 25px;
 		label {
 			margin: 0;
@@ -44,10 +46,10 @@
 			margin-top: 10px;
 		}
 		&.correct-answer {
-			border-color: $btn-success;
+			border-color: $success;
 		}
 		&.wrong-answer {
-			border-color: #e22d2d;
+			border-color: $error;
 		}
 	}
 }
@@ -58,7 +60,7 @@
 	right: 0;
 	z-index: 5;
 	height: 80px;
-	background: #E4EAEC;
+	background-color: $light-container-bg;
 	.verify-btn {
 		position: absolute;
 		right: 60px;
@@ -69,18 +71,16 @@
 		cursor: pointer;
 		font-weight: 900;
 		font-size: 22px;
-		color: #fff;
-		background-color: $btn-success;
+		color: $lightest-text-color;
+		background-color: $success;
 		&:disabled {
-			border-color: #acadad;
-			color: #acadad;
+			border-color: $text-color;
+			color: $text-color;
 			background-color: transparent;
 		}
 	}
-	&.wrong {
-		&.verify-answer {
-		  background: #e5bbbb;
-		}
+	&.wrong.verify-answer {
+	  background-color: $error-bg;
 	}
 }
 
@@ -93,8 +93,8 @@
 					content: '\f111';
 					font-family: FontAwesome;
 					text-align: center;
-					border-color: $primary-colour;
-					color: $primary-colour;
+					border-color: $primary-color;
+					color: $primary-color;
 				}
 			}
 			label {
@@ -111,7 +111,9 @@
 					margin-top: -13px;
 					padding: 1px;
 					line-height: 1;
-					border: solid 2px #aaa;
+					border-width: 2px;
+		      border-style: solid;
+		      border-color: $text-color;
 					border-radius: 50%;
 					font-size: 21px;
 					font-family: FontAwesome;
@@ -130,9 +132,11 @@
 				height: 36px;
 				width: 80px;
 				margin-right: 15px;
-				border: solid 2px #aaa;
+	      border-width: 2px;
+	      border-style: solid;
+	      border-color: $text-color;
 				border-radius: 18px;
-				background-color: #ccc;
+				background-color: $light-container-bg;
 				input {
 					display: none;
 				}
@@ -173,9 +177,9 @@
 				  margin-left: -16px;
 				  text-align: center;
 				  font-weight: 900;
-				  color: $primary-colour;
+				  color: $primary-color;
 				  border-radius: 50%;
-				  background-color: #fff;
+				  background-color: $lightest-container-bg;
 				  -webkit-transition: .4s;
 				  transition: .4s;
 				}
@@ -201,7 +205,7 @@
 					display: block;
 					font-weight: 900;
 					font-size: 18px;
-					color: #aaa;
+					color: $text-color;
 					z-index: 1;
 				}
 				&:after {
@@ -212,7 +216,7 @@
 					display: block;
 					font-weight: 900;
 					font-size: 18px;
-					color: #aaa;
+					color: $text-color;
 					z-index: 1;
 				}
 			}
@@ -233,22 +237,24 @@
 		min-width: 80px;
 		vertical-align: top;
 		line-height: 22px;
-		border: solid 2px $light-grey;
+		border-width: 2px;
+		border-style: solid;
+		border-color: $border-color;
 		border-radius: 5px;
 		&.border {
 			border: solid 2pc;
 			&__valid {
-				border-color: #66a91a;
+				border-color: $success;
 			}
 			&__invalid {
-				border-color: #e22d2d;
+				border-color: $error;
 			}
 		}
 		&.correct-answer {
-			border-color: $btn-success;
+			border-color: $success;
 		}
 		&.wrong-answer {
-			border-color: #e22d2d;
+			border-color: $error;
 		}
 	}
 	.dragArea {
@@ -262,7 +268,7 @@
 			cursor: pointer;
 			text-align: center;
 			font-weight: 900;
-			background-color: #fff;
+			background-color: $lightest-container-bg;
 
 			/*+ div {
 				margin-left: 15px;
@@ -279,14 +285,25 @@
 	.answer-box {
 		margin: 20px 0;
 		padding: 11px 15px 10px 15px;
-		border: solid 1px $light-grey;
+		border-width: 1px;
+		border-style: solid;
+		border-color: $border-color;
 		border-radius: 5px;
-		background: rgba(0,0,0, .03);
+		background-color: $dark-alpha-container-bg;
 		p {
 			margin: 0;
 			font-weight: bold;
 			font-size: 15px;
-			color: rgba(#acadad, .7);
+			color: $text-color;
+		}
+	}
+}
+
+.content-component {
+	+ .verify-answer.wrong {
+		background-color: $light-container-bg;
+		.btn-continue-lesson {
+			background-color: $primary-color;
 		}
 	}
 }

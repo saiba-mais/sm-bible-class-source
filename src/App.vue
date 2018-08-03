@@ -1,5 +1,180 @@
 <template>
   <div id="app" class="ucb-modal">
+    <v-style>
+      .start-lesson,
+      .end-lesson form input.end-lesson-button,
+      .end-lesson form .ucb-saiba-mais-lessons:hover,
+      .ucb-progress-bar li .completed {
+        background-color: {{ this.$root.$data.primaryColor }};
+      }
+
+      .end-lesson form .ucb-saiba-mais-lessons:hover,
+      .radio-question .ucb-answers li .question-answer:checked + label:before {
+        border-color: {{ this.$root.$data.primaryColor }};
+      }
+
+      h1,
+      .lesson-intro span,
+      .radio-question .ucb-answers li .question-answer:checked + label:before,
+      .true-false-question .ucb-answers li .question-answer-group span.toggle-button:before {
+        color: {{ this.$root.$data.primaryColor }};
+      }
+
+      .lesson-intro .lesson-info div {
+        color: {{ this.$root.$data.secondaryColor }};
+      }
+
+      .ucb-bible-versicle .dismiss-versicles {
+        background-color: {{ this.$root.$data.lightAlphaContainerBg }};
+      }
+
+      .contact-teacher span,
+      .contact-teacher-overlay,
+      .true-false-question .ucb-answers li .question-answer-group span.toggle-button:before,
+      .complete-question .dragArea div {
+        background-color: {{ this.$root.$data.lightestContainerBg }};
+      }
+
+      .end-lesson .teste,
+      .verify-answer,
+      .true-false-question .ucb-answers li .question-answer-group {
+        background-color: {{ this.$root.$data.lightContainerBg }};
+      }
+
+      /* border color */
+      .end-lesson .teste:before { 
+        border-bottom-color: {{ this.$root.$data.lightContainerBg }};
+      }
+
+      /* mq */
+      @media (max-width: 991px) {
+        .end-lesson .teste:before {
+          border-bottom-color: {{ this.$root.$data.lightContainerBg }};
+        }
+      }
+
+      .normal,
+      .ucb-modal,
+      .end-lesson .teste:before {
+        background-color: {{ this.$root.$data.containerBg }};
+      }
+
+      .complete-question .answer-box {
+        background-color: {{ this.$root.$data.darkAlphaContainerBg }};
+      }
+
+      .ucb-bible-versicle {
+        background-color: {{ this.$root.$data.calloutBg }};
+      }
+
+      .ucb-answers li,
+      .complete-question .drag,
+      .complete-question .answer-box {
+        border-color: {{ this.$root.$data.borderColor }};
+      }
+
+      .wrong button,
+      .right button,
+      .btn-continue-lesson,
+      .contact-teacher ul li a,
+      .start-lesson,
+      .start-lesson:hover,
+      .end-lesson form input.end-lesson-button,
+      .end-lesson form input.end-lesson-button:hover,
+      .end-lesson form .ucb-saiba-mais-lessons:hover,
+      .verify-answer .verify-btn {
+        color: {{ this.$root.$data.lightestTextColor }};
+      }
+
+      .ucb-bible-versicle .dismiss-versicles:hover {
+        background-color: {{ this.$root.$data.lightTextColor }};
+      }
+
+      .ucb-modal h5 {
+        color: {{ this.$root.$data.lightTextColor }};
+      }
+
+      .end-lesson form input,
+      .end-lesson form .ucb-saiba-mais-lessons,
+      .verify-answer .verify-btn:disabled,
+      .radio-question .ucb-answers li label:before,
+      .true-false-question .ucb-answers li .question-answer-group {
+        border-color: {{ this.$root.$data.textColor }};
+      }
+
+      .end-lesson form .ucb-saiba-mais-lessons,
+      .ucb-try-again,
+      .verify-answer .verify-btn:disabled,
+      .true-false-question .ucb-answers li .question-answer-group:before,
+      .true-false-question .ucb-answers li .question-answer-group:after,
+      .complete-question .answer-box p {
+        color: {{ this.$root.$data.textColor }};
+      }
+
+      .ucb-bible-versicle,
+      .end-lesson .lesson-conclusion-feedback p,
+      .ucb-try-again:hover {
+        color: {{ this.$root.$data.darkTextColor }};
+      }
+
+      h2,
+      a,
+      a:hover,
+      .ucb-modal {
+        color: {{ this.$root.$data.darkestTextColor }};
+      }
+
+      .feedback-right .answer-feedback,
+      .right.verify-answer {
+        background-color: {{ this.$root.$data.successBg }};
+      }
+
+      .right button,
+      .verify-answer .verify-btn {
+        background-color: {{ this.$root.$data.success }};
+      }
+
+      /* border color */
+      .ucb-answers li.correct-answer,
+      .complete-question .drag.border__valid,
+      .complete-question .drag.correct-answer {
+        border-color: {{ this.$root.$data.success }};
+      }
+
+      /* color */
+      .feedback-right .answer-feedback,
+      .feedback-right .answer-feedback h5 {
+        color: {{ this.$root.$data.success }};
+      }
+
+      .feedback-wrong .answer-feedback,
+      .verify-answer.wrong {
+        background-color: {{ this.$root.$data.errorBg }};
+      }
+
+      /* 
+        * $error: #e22d2d; // red
+        * 6 matches
+      */
+
+      /* bg color */
+      .wrong button {
+        background-color: {{ this.$root.$data.error }};
+      }
+
+      /* border color */
+      .ucb-answers li.wrong-answer,
+      .complete-question .drag.border__invalid,
+      .complete-question .drag.wrong-answer {
+        border-color: {{ this.$root.$data.error }};
+      }
+
+      /* color */
+      .feedback-wrong .answer-feedback, 
+      .feedback-wrong .answer-feedback h5 {
+        color: {{ this.$root.$data.error }};
+      }
+    </v-style>
     <div class="ucb-iframe-content">
 
       <div v-if="lesson">
@@ -33,7 +208,7 @@ export default {
   name: 'app',
   data () {
     return {
-      lesson: null,
+      lesson: this.lesson,
       currentStep: 'intro',
       outOfService: false,
       totalCorrectAnswers: 0
@@ -46,7 +221,8 @@ export default {
   },
   methods: {
     getLessonJsonDataAjax: function (response) {
-      this.$http.get(this.jsonSrc).then(response => {
+      console.log(this.$root.$data)
+      this.$http.get(this.$root.$data.lesson).then(response => {
         this.lesson = response.body
       })
     },
@@ -54,12 +230,11 @@ export default {
       this.currentStep = 'end'
     }
   },
-  computed: {
-    jsonSrc: function () {
-      // return window.location.search.match(/^.*lesson=([^&]+.json).*$/g)[1]
-      return /^.*lesson=([^&]+.json).*$/g.exec(window.location.href)[1]
-    }
-  },
+  // computed: {
+  //   jsonSrc: function () {
+  //     return /^.*lesson=([^&]+.json).*$/g.exec(window.location.href)[1]
+  //   }
+  // },
   created: function () {
     let self = this
     this.$root.$on('correct-answer-counter', function (totalRightAnswers) {

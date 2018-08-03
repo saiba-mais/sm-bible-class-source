@@ -7,30 +7,33 @@
   },
   "questions": [
     {
-      "versicles": [
+      "appendix": [
         {
-          "versicleId": "joao-1717",
-          "bibleVersicle": "João 17:17",
-          "versicleText": "Santifica-os na tua verdade; a tua palavra é a verdade.",
+          "appendixType": "versicle",
+          "appendixId": "joao-1717",
+          "appendixTitle": "João 17:17",
+          "appendixContent": "Santifica-os na tua verdade; a tua palavra é a verdade.", 
           "autoOpen": false
         },
         {
-          "versicleId": "isaias-407",
-          "bibleVersicle": "Isaías 40:7",
-          "versicleText": "Seca-se a erva, e cai a flor, porém a palavra de nosso Deus subsiste eternamente.\r\n",
+          "appendixType": "versicle",
+          "appendixId": "isaias-407",
+          "appendixTitle": "Isaías 40:7",
+          "appendixContent": "Seca-se a erva, e cai a flor, porém a palavra de nosso Deus subsiste eternamente.\r\n",
           "autoOpen": false
         },
         {
-          "versicleId": "joao-832",
-          "bibleVersicle": "João 8:32",
-          "versicleText": "E conhecereis a verdade, e a verdade vos libertará.",
+          "appendixType": "versicle",
+          "appendixId": "joao-832",
+          "appendixTitle": "João 8:32",
+          "appendixContent": "E conhecereis a verdade, e a verdade vos libertará.",
           "autoOpen": false
         }
       ],
       "description": "A Bíblia é nossa regra de fé e prática. Ela é a fonte real de toda a verdade. Sem ela andamos nas trevas que o pecado nos trouxe. Embora o mundo contemporâneo seja relativista quanto aos ensinos bíblicos, ela não deixa de exercer seu poder transformador e santificador na vida do leitor. \"Seca-se a erva e cai a flor, mas a Palavra de Deus permanece para sempre\" (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"isaias-407\">Is 40:7</a>). Jesus disse: \"Conhecereis a verdade e a verdade vos libertará\" (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-832\">Jo 8:32</a>)",
       "type": "complete",
       "questionTitle": "Como Jesus considerava a Bíblia?",
-      "questionVersicles": "Leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-1717\">João 17:17</a> e complete a frase:",
+      "questionAppendix": "Leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-1717\">João 17:17</a> e complete a frase:",
       "answerDescription": "Santifica-os na verdade, a Tua Palavra é a {{0}}.",
       "answers": [
         {
@@ -62,18 +65,43 @@
       "rightAnswer": "1-VERDADE"
     },
     {
-      "versicles": [
+      "appendix": [
         {
-          "versicleId": "",
-          "bibleVersicle": "",
-          "versicleText": "",
+          "appendixType": "versicle",
+          "appendixId": "joao-832",
+          "appendixTitle": "João 8:32",
+          "appendixContent": "E conhecereis a verdade, e a verdade vos libertará.",
+          "autoOpen": false
+        }
+      ],
+      "description": "<h1>Teste do componente de conteúdo.</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ornare nulla. Aliquam finibus leo vel elit congue, vel ultrices tellus ullamcorper. Quisque quis eros vitae dui venenatis bibendum. Cras ornare ut est eu dictum. Nunc id leo sit amet magna laoreet sollicitudin. Nulla facilisi.</p><ul><li>Etiam gravida euismod nibh, vulputate rhoncus tortor venenatis eget.</li><li>Maecenas cursus arcu porttitor, porttitor magna vel, mattis magna.</li><li>Nullam nec ante quis orci rutrum aliquet ut id lorem.</li></ul><p>In eget ornare nunc. Cras vulputate mauris eu congue consequat. Nam vulputate gravida nisi. In pretium eu risus a vulputate. Praesent vehicula venenatis erat, iaculis elementum tortor accumsan sed. Maecenas cursus id neque nec elementum. Mauris tempus id ligula aliquam posuere. Vivamus tortor neque, placerat at nibh vitae, bibendum iaculis enim. Praesent sodales nibh ac ligula elementum pulvinar. Ut dapibus nec risus at porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p> (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-832\">Jo 8:32</a>)",
+      "type": "content",
+      "questionTitle": "",
+      "questionAppendix": "Leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"joao-1717\">João 17:17</a> e complete a frase:",
+      "answerDescription": "",
+      "answers": [
+        {
+          "position": "",
+          "word": "",
+          "value": ""
+        }
+      ],
+      "rightAnswer": ""
+    },
+    {
+      "appendix": [
+        {
+          "appendixType": "",
+          "appendixId": "",
+          "appendixTitle": "",
+          "appendixContent": "",
           "autoOpen": false
         }
       ],
       "description": "Leitura complementar:\r\n1. Nisto Cremos: Crença 1.\r\n2. Tratado de Teologia: Capítulos 2-3.\r\n3. Ellen G. White: Educação. capítulos 13-20 (Casa Publicadora Brasileira).\r\n4. Ellen G. White: O Grande Conflito. Capítulos 15 e 37 (Casa Publicadora Brasileira).\r\n5. Ellen G. White: Testemunhos Seletos. vol. 2, capítulo 42 (Casa Publicadora Brasileira).\r\n6. Emilson Reis. Introdução Geral à Bíblia: como a Bíblia foi escrita e chegou até nós (Privilégio Artes\r\nGráficas).\r\n7. George W. Reid. Compreendendo as Escrituras: Uma Abordagem Adventista (Unaspress).\r\n",
       "type": "true-false",
       "questionTitle": "Compromisso de Fé",
-      "questionVersicles": "",
+      "questionAppendix": "",
       "answers": [
         {
           "text": "Aceito toda a Bíblia como regra de fé para minha vida.",
@@ -91,36 +119,40 @@
       "rightAnswer": "V, V, V"
     },
     {
-      "versicles": [
+      "appendix": [
         {
-          "versicleId": "efesios-28-9",
-          "bibleVersicle": "Efésios 2:8-9",
-          "versicleText": "Porque pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus.\r\nNão vem das obras, para que ninguém se glorie;",
+          "appendixType": "versicle",
+          "appendixId": "efesios-28-9",
+          "appendixTitle": "Efésios 2:8-9",
+          "appendixContent": "Porque pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus.\r\nNão vem das obras, para que ninguém se glorie;",
           "autoOpen": false
         },
         {
-          "versicleId": "galatas-216",
-          "bibleVersicle": "Gálatas 2:16",
-          "versicleText": " Sabendo que o homem não é justificado pelas obras da lei, mas pela fé em Jesus Cristo, temos também crido em Jesus Cristo, para sermos justificados pela fé em Cristo, e não pelas obras da lei; porquanto pelas obras da lei nenhuma carne será justificada.",
+          "appendixType": "video",
+          "appendixId": "video-1",
+          "appendixTitle": "",
+          "appendixContent": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0CnXtSnmKTQ\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+          "autoOpen": true
+        },
+        {
+          "appendixType": "versicle",
+          "appendixId": "romanos-829",
+          "appendixTitle": "Romanos 8:29",
+          "appendixContent": "Porque os que dantes conheceu também os predestinou para serem conformes à imagem de seu Filho, a fim de que ele seja o primogênito entre muitos irmãos.",
           "autoOpen": false
         },
         {
-          "versicleId": "romanos-829",
-          "bibleVersicle": "Romanos 8:29",
-          "versicleText": "Porque os que dantes conheceu também os predestinou para serem conformes à imagem de seu Filho, a fim de que ele seja o primogênito entre muitos irmãos.",
-          "autoOpen": false
-        },
-        {
-          "versicleId": "deuteronomio-301920",
-          "bibleVersicle": "Deuteronômio 30:19,20",
-          "versicleText": "Os céus e a terra tomo hoje por testemunhas contra vós, de que te tenho proposto a vida e a morte, a bênção e a maldição; escolhe pois a vida, para que vivas, tu e a tua descendência,\r\nAmando ao Senhor teu Deus, dando ouvidos à sua voz, e achegando-te a ele; pois ele é a tua vida, e o prolongamento dos teus dias; para que fiques na terra que o Senhor jurou a teus pais, a Abraão, a Isaque, e a Jacó, que lhes havia de dar.",
+          "appendixType": "versicle",
+          "appendixId": "deuteronomio-301920",
+          "appendixTitle": "Deuteronômio 30:19,20",
+          "appendixContent": "Os céus e a terra tomo hoje por testemunhas contra vós, de que te tenho proposto a vida e a morte, a bênção e a maldição; escolhe pois a vida, para que vivas, tu e a tua descendência,\r\nAmando ao Senhor teu Deus, dando ouvidos à sua voz, e achegando-te a ele; pois ele é a tua vida, e o prolongamento dos teus dias; para que fiques na terra que o Senhor jurou a teus pais, a Abraão, a Isaque, e a Jacó, que lhes havia de dar.",
           "autoOpen": false
         }
       ],
       "description": "Muitos imaginam que podem alcançar a salvação por meio de campanhas beneficentes, doações, penitências, obras humanitárias ou boa conduta. Essas atitudes são boas e recomendadas, mas a salvação é um presente de Deus, recebido através da fé e não depende de nós. A Bíblia rejeita a ideia de que alguns foram escolhidos para a salvação e outros para a perdição, mas enfatiza que, em Cristo, todos nós fomos predestinados à salvação, que depende da decisão do ser humano (<a href=\"#\" class=\"versicle-trigger\" data-versicle=\"romanos-829\">Rm 8:29</a>; <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"deuteronomio-301920\">Dt 30:19 e 20</a>).",
       "type": "radio",
       "questionTitle": "A salvação depende de nossas boas obras? ",
-      "questionVersicles": "leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"efesios-28-9\">Efésios 2:8-9</a>; <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"galatas-216\">Gálatas 2:16</a> e marque a resposta correta:",
+      "questionAppendix": "leia <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"efesios-28-9\">Efésios 2:8-9</a>; <a href=\"#\" class=\"versicle-trigger\" data-versicle=\"video-1\">vídeo</a> e marque a resposta correta:",
       "answers": [
         {
           "text": "Sim",

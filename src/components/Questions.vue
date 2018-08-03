@@ -21,6 +21,10 @@
         <complete-question :singleQuestion="question" />
       </div>
 
+      <div v-if="currentQuestion === index && question.type === 'content'">
+        <content-component :singleQuestion="question" />
+      </div>
+
       <div ></div>
 
     </div>
@@ -34,6 +38,7 @@
 import RadioQuestion from './RadioQuestion.vue'
 import TrueFalseQuestion from './TrueFalseQuestion.vue'
 import CompleteQuestion from './CompleteQuestion.vue'
+import ContentComponent from './ContentComponent.vue'
 
 export default {
   props: ['singleLesson'],
@@ -50,7 +55,8 @@ export default {
   components: {
     'radio-question': RadioQuestion,
     'true-false-question': TrueFalseQuestion,
-    'complete-question': CompleteQuestion
+    'complete-question': CompleteQuestion,
+    'content-component': ContentComponent
   },
   computed: {
     progressBarClass: function () {

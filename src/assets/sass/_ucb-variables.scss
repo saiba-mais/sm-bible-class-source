@@ -1,12 +1,34 @@
-$body-bg: #eef1f2;
-$versicle-bg: #fcfae7;
+// ---
+// colors
 
-$light-grey: #dadada;
-$primary-colour: #71456D;
-$secondary-colour: #996e95;
+// accent
+$primary-color: #71456D; // purple
+$secondary-color: #996e95; // light purple
 
-$versicle-text-color: #575e5f;
+// container bg
+$light-alpha-container-bg: rgba(255,255,255,.8); // transp. white
+$lightest-container-bg: #fff; // white
+$light-container-bg: #e4eaec; // light grey
+$container-bg: #eef1f2; // mid grey
+$dark-alpha-container-bg: rgba(0,0,0,.03); // transp. black
+$callout-bg: #fcfae7; // light yellow
 
-$btn-success: #66a91a;
+// structural colors
+$border-color: #dadada; // mid-dark grey
 
+// text
+$lightest-text-color: #fff; // white
+$light-text-color: #cacaca; // light grey
+$text-color: #acadad; // regular grey
+$dark-text-color: #575e5f; // dark grey
+$darkest-text-color: #000; // black 
+
+// states
+$success-bg: #dcefc4; // light green
+$success: #66a91a; // green
+$error-bg: #efc4c4; // light red
+$error: #e22d2d; // red
+
+
+// ---
 $font-family-sans-serif: 'Lato', sans-serif;
