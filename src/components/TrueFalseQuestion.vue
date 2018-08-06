@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div v-if="currentVersicle !== null"  class="show ucb-bible-versicle" :class="currentVersicle.appendixType">
+    <div v-if="currentVersicle !== null"  class="show ucb-bible-versicle" :class="[currentVersicle.appendixType, showVersiclesClass]">
       <button class="dismiss-versicles" v-on:click="hideVersicles"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="#000000" fill-opacity=".158" fill-rule="evenodd" d="M1402,17 C1390.95,17 1382,25.95 1382,37 C1382,48.05 1390.95,57 1402,57 C1413.05,57 1422,48.05 1422,37 C1422,25.95 1413.05,17 1402,17 Z M1412,44.17 L1409.17,47 L1402,39.83 L1394.83,47 L1392,44.17 L1399.17,37 L1392,29.83 L1394.83,27 L1402,34.17 L1409.17,27 L1412,29.83 L1404.83,37 L1412,44.17 Z" style="mix-blend-mode:multiply" transform="translate(-1382 -17)"/></svg></button>
       <div>
           <strong v-if="currentVersicle.appendixTitle">{{ currentVersicle.appendixTitle }}</strong>
@@ -37,9 +37,9 @@
       </div> 
     </div>
 
-    <div class="contact-teacher">
+    <div v-if="(fbMessengerAssistent !== null || whatsappAssistent !== null)" class="contact-teacher">
       <ul v-bind:class="showTeacherAssistent">
-        <li class="facebook-teacher">
+        <li v-if="fbMessengerAssistent" class="facebook-teacher">
           <a v-bind:href="fbMessengerAssistent" target="_blank">
             <svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs></defs>
@@ -59,7 +59,7 @@
             {{ $t('facebookTeacher') }}
           </a>
         </li>
-        <li class="whatsapp-teacher">
+        <li v-if="whatsappAssistent" class="whatsapp-teacher">
           <a v-on:click="whatsappMessage" href="#">
             <svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs></defs>
@@ -123,13 +123,14 @@ export default {
       question: this.singleQuestion,
       trueFalseAnswer: [],
       feedback: null,
-      showVersiclesClass: 'hide',
+      showVersiclesClass: null,
       descriptionVersicleTrigger: '',
       appendixId: null,
       borderFeedback: [],
       wrongAnswerCounter: 0,
       showTeacherAssistent: 'hide',
-      fbMessengerAssistent: 'https://m.me/' + this.$root.$data.messenger
+      fbMessengerAssistent: (this.$root.$data.messenger) ? 'https://m.me/' + this.$root.$data.messenger : null,
+      whatsappAssistent: (this.$root.$data.whatsapp) ? this.$root.$data.whatsapp : null
     }
   },
   computed: {
@@ -198,7 +199,7 @@ export default {
       this.showVersiclesClass = 'show'
     },
     hideVersicles: function () {
-      this.currentVersicle = null
+      this.showVersiclesClass = 'hideAppendix'
     },
     toggleTeacherAssistent: function () {
       if (this.showTeacherAssistent === 'hide') {
@@ -225,11 +226,12 @@ export default {
       for (let index = 0; index < this.question.appendix.length; ++index) {
         if (this.question.appendix[index].appendixId === appendixId) {
           this.currentVersicle = this.question.appendix[index]
+          this.showVersiclesClass = 'showAppendix'
         }
       }
     },
     whatsappMessage: function () {
-      window.open('https://api.whatsapp.com/send?phone=' + this.$root.$data.whatsapp)
+      window.open('https://api.whatsapp.com/send?phone=' + this.whatsappAssistent)
     }
   },
   watch: {
@@ -247,6 +249,7 @@ export default {
     for (let i = 0; i < this.question.appendix.length; i++) {
       if (this.question.appendix[i].autoOpen === true) {
         this.currentVersicle = this.question.appendix[i]
+        this.showVersiclesClass = 'showAppendix'
       }
     }
   }

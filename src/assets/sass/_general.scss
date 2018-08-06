@@ -37,6 +37,12 @@ a {
 .hide {
   display: none;
 }
+.showAppendix {
+  visibility: visible;
+}
+.hideAppendix {
+  visibility: hidden;
+}
 .wrong, .right {
   position: absolute;
   bottom: 0;
@@ -492,30 +498,34 @@ a {
       top: auto;
       bottom: 0;
       height: 60vh;
-      &.show {
+      &.showAppendix {
         animation-duration: 1s;
         animation-name: slidein;
       }
       @keyframes slidein {
         from {
-          height: 0;
+          visibility: hidden;
+          bottom: -60vh;
         }
 
         to {
-          height: 60vh;
+          visibility: visible;
+          bottom: 0;
         }
       }
-      &.hideVersicle {
+      &.hideAppendix {
         animation-duration: 1s;
         animation-name: slideout;
       }
       @keyframes slideout {
         from {
-          height: 60vh;
+          visibility: visible;
+          bottom: 0;
         }
 
         to {
-          height: 0;
+          visibility: hidden;
+          bottom: -60vh;
         }
       }
     }
@@ -536,6 +546,12 @@ a {
     }
     .dismiss-versicles {
       z-index: 6;
+    }
+    .showAppendix {
+      visibility: visible;
+    }
+    .hideAppendix {
+      visibility: hidden;
     }
   }
 
