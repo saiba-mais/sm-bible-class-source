@@ -319,7 +319,7 @@ a {
   }
   .teste {
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     margin: 0 -60px -80px;
     padding: 0 60px;
     background-color: $light-container-bg;
@@ -332,7 +332,7 @@ a {
       height: 0;
       width: 0;
       border-left: 0vw solid transparent;
-      border-right: 70vw solid transparent;
+      border-right: 50vw solid transparent;
       border-bottom-width: 70px;
       border-bottom-style: solid;
       border-bottom-color: $light-container-bg;
@@ -392,6 +392,13 @@ a {
         background-color: $primary-color;
       }
     }
+  }
+  .end-lesson-brand {
+    margin: 0 -60px 0 -60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: $container-bg;
   }
 }
 .ucb-try-again {
@@ -457,7 +464,8 @@ a {
     }
     form {
       input.end-lesson-button {
-        margin-top: 20px;
+        width: 100%;
+        margin-top: 0;
         padding: 10px 20px;
         line-height: 24px;
         font-size: 24px;
@@ -477,6 +485,9 @@ a {
         border-bottom-style: solid;
         border-bottom-color: $light-container-bg;
       }
+    }
+    .end-lesson-brand {
+      margin: 0px -20px 0 -20px;
     }
   }
   .ucb-bible-versicle {
