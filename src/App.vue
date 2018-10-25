@@ -5,72 +5,72 @@
       .end-lesson form input.end-lesson-button,
       .end-lesson form .ucb-saiba-mais-lessons:hover,
       .ucb-progress-bar li .completed {
-        background-color: {{ this.$root.$data.primaryColor }};
+        background-color: {{ this.$root.$data.primarycolor }};
       }
 
       .end-lesson form .ucb-saiba-mais-lessons:hover,
       .radio-question .ucb-answers li .question-answer:checked + label:before {
-        border-color: {{ this.$root.$data.primaryColor }};
+        border-color: {{ this.$root.$data.primarycolor }};
       }
 
       h1,
       .lesson-intro span,
       .radio-question .ucb-answers li .question-answer:checked + label:before,
       .true-false-question .ucb-answers li .question-answer-group span.toggle-button:before {
-        color: {{ this.$root.$data.primaryColor }};
+        color: {{ this.$root.$data.primarycolor }};
       }
 
       .lesson-intro .lesson-info div {
-        color: {{ this.$root.$data.secondaryColor }};
+        color: {{ this.$root.$data.secondarycolor }};
       }
 
       .ucb-bible-versicle .dismiss-versicles {
-        background-color: {{ this.$root.$data.lightAlphaContainerBg }};
+        background-color: {{ this.$root.$data.lightalphacontainerbg }};
       }
 
       .contact-teacher span,
       .contact-teacher-overlay,
       .true-false-question .ucb-answers li .question-answer-group span.toggle-button:before,
       .complete-question .dragArea div {
-        background-color: {{ this.$root.$data.lightestContainerBg }};
+        background-color: {{ this.$root.$data.lightestcontainerbg }};
       }
 
       .end-lesson .teste,
       .verify-answer,
       .true-false-question .ucb-answers li .question-answer-group {
-        background-color: {{ this.$root.$data.lightContainerBg }};
+        background-color: {{ this.$root.$data.lightcontainerbg }};
       }
 
       /* border color */
       .end-lesson .teste:before { 
-        border-bottom-color: {{ this.$root.$data.lightContainerBg }};
+        border-bottom-color: {{ this.$root.$data.lightcontainerbg }};
       }
 
       /* mq */
       @media (max-width: 991px) {
         .end-lesson .teste:before {
-          border-bottom-color: {{ this.$root.$data.lightContainerBg }};
+          border-bottom-color: {{ this.$root.$data.lightcontainerbg }};
         }
       }
 
       .normal,
       .ucb-modal,
       .end-lesson .teste:before {
-        background-color: {{ this.$root.$data.containerBg }};
+        background-color: {{ this.$root.$data.containerbg }};
       }
 
       .complete-question .answer-box {
-        background-color: {{ this.$root.$data.darkAlphaContainerBg }};
+        background-color: {{ this.$root.$data.darkAlphaContainerbg }};
       }
 
       .ucb-bible-versicle {
-        background-color: {{ this.$root.$data.calloutBg }};
+        background-color: {{ this.$root.$data.calloutbg }};
       }
 
       .ucb-answers li,
       .complete-question .drag,
       .complete-question .answer-box {
-        border-color: {{ this.$root.$data.borderColor }};
+        border-color: {{ this.$root.$data.bordercolor }};
       }
 
       .wrong button,
@@ -83,15 +83,15 @@
       .end-lesson form input.end-lesson-button:hover,
       .end-lesson form .ucb-saiba-mais-lessons:hover,
       .verify-answer .verify-btn {
-        color: {{ this.$root.$data.lightestTextColor }};
+        color: {{ this.$root.$data.lightesttextcolor }};
       }
 
       .ucb-bible-versicle .dismiss-versicles:hover {
-        background-color: {{ this.$root.$data.lightTextColor }};
+        background-color: {{ this.$root.$data.lighttextcolor }};
       }
 
       .ucb-modal h5 {
-        color: {{ this.$root.$data.lightTextColor }};
+        color: {{ this.$root.$data.lighttextcolor }};
       }
 
       .end-lesson form input,
@@ -99,7 +99,7 @@
       .verify-answer .verify-btn:disabled,
       .radio-question .ucb-answers li label:before,
       .true-false-question .ucb-answers li .question-answer-group {
-        border-color: {{ this.$root.$data.textColor }};
+        border-color: {{ this.$root.$data.textcolor }};
       }
 
       .end-lesson form .ucb-saiba-mais-lessons,
@@ -108,25 +108,25 @@
       .true-false-question .ucb-answers li .question-answer-group:before,
       .true-false-question .ucb-answers li .question-answer-group:after,
       .complete-question .answer-box p {
-        color: {{ this.$root.$data.textColor }};
+        color: {{ this.$root.$data.textcolor }};
       }
 
       .ucb-bible-versicle,
       .end-lesson .lesson-conclusion-feedback p,
       .ucb-try-again:hover {
-        color: {{ this.$root.$data.darkTextColor }};
+        color: {{ this.$root.$data.darktextcolor }};
       }
 
       h2,
       a,
       a:hover,
       .ucb-modal {
-        color: {{ this.$root.$data.darkestTextColor }};
+        color: {{ this.$root.$data.darkesttextcolor }};
       }
 
       .feedback-right .answer-feedback,
       .right.verify-answer {
-        background-color: {{ this.$root.$data.successBg }};
+        background-color: {{ this.$root.$data.successbg }};
       }
 
       .right button,
@@ -149,7 +149,7 @@
 
       .feedback-wrong .answer-feedback,
       .verify-answer.wrong {
-        background-color: {{ this.$root.$data.errorBg }};
+        background-color: {{ this.$root.$data.errobg }};
       }
 
       /* 
