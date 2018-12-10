@@ -332,15 +332,16 @@ for (var i = 0 ; i < triggerButton.length; i++) {
 
   triggerButton[i].addEventListener('click', function() {
 
-    var queryMap = window.bibleClassSettings;
+    window.bibleClassSettings = {};
+    //var queryMap = window.bibleClassSettings;
     for (var i = 0; i < this.attributes.length; i++){
       var attr = this.attributes[i];
       if (attr.name.substring(0, 5) == 'data-'){
-        queryMap[attr.name.substring(5)] = attr.value;
+        window.bibleClassSettings[attr.name.substring(5)] = attr.value;
       }
     }
 
-    var lessonURL = 'http://192.168.1.89:5000/?' + serialize(queryMap);
+    var lessonURL = 'http://localhost:5000/?' + serialize(window.bibleClassSettings);
     // var lessonURL = 'http://localhost:5000/?lesson=' + currentLesson + '&lang=' + language;
     ucbBibleStudyLessonModal.open(lessonURL);
   });
