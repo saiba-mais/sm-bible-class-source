@@ -168,6 +168,8 @@ export default {
   },
   methods: {
     verifyAnswer: function () {
+      console.log(this.picked)
+
       if (this.picked === 'true') {
         this.$root.$emit('answer-correct')
         this.feedback = true

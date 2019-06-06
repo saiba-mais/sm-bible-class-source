@@ -40,6 +40,7 @@ export default {
     }
   },
   created: function () {
+    console.log('https://saibamais.org.br/wp-json/saibamais/v2/lesson/' + this.currentLesson + '/students')
     this.$http.get('https://saibamais.org.br/wp-json/saibamais/v2/lesson/' + this.currentLesson + '/students').then(response => {
       this.$set(this, 'studentsNumber', response.body.students)
     }, response => {

@@ -221,7 +221,6 @@ export default {
   },
   methods: {
     getLessonJsonDataAjax: function (response) {
-      console.log(this.$root.$data)
       this.$http.get(this.$root.$data.lesson).then(response => {
         this.lesson = response.body
       })

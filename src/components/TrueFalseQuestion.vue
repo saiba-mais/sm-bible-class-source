@@ -191,7 +191,7 @@ export default {
         this.wrongAnswerCounter = this.wrongAnswerCounter + ' ' + this.$t('questionFeedbackPerformanceSingular')
       }
 
-      if (this.feedbackStyleClass === 'right') {
+      if (this.feedbackStyleClass === 'feedback-right') {
         this.$root.$emit('answer-correct')
       }
     },
