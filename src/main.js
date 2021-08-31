@@ -53,7 +53,9 @@ let defaultSettings = {
   lang: 'en',
   // contact settings
   messenger: null,
-  whatsapp: null
+  whatsapp: null,
+  // apis
+  progressendpoint: 'https://saibamais.org.br/wp-json/saibamais/v2/progress'
 }
 
 let userSettings = getURLSettings()

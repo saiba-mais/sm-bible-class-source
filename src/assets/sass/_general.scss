@@ -5,7 +5,7 @@ body {
 h1 {
   margin-bottom: 25px;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 45px;
   color: $primary-color;
 }
 h2 {
@@ -147,6 +147,7 @@ a {
         svg {
           margin-right: 5px;
         }
+
       }
       + li {
         margin-top: 10px;
@@ -160,6 +161,7 @@ a {
     }
     + span {
       margin-top: 25px;
+      cursor: pointer;
     }
   }
   span {
@@ -199,7 +201,7 @@ a {
   background-color: $container-bg;
   h5 {
     position: absolute;
-    top: 20px;
+    top: 10px;
     font-weight: 900;
     font-size: 20px;
     color: $light-text-color;
@@ -211,7 +213,7 @@ a {
   .ucb-iframe-content {
     position: relative;
     min-height: 100vh;
-    padding: 125px 60px 80px 60px;
+    padding: 80px 60px 80px 60px;
   }
 }
 .lesson-intro {
@@ -245,7 +247,7 @@ a {
   padding: 20px 30px;
   line-height: 36px;
   border-radius: 42px;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 900;
   color: $lightest-text-color;
   background-color: $primary-color;
@@ -448,7 +450,7 @@ a {
     margin-bottom: 30px;
   }
   .start-lesson {
-    padding: 10px 20px;
+    padding: 10px 16px;
     line-height: 24px;
     font-size: 24px;
     svg {

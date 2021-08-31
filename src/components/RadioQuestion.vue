@@ -17,7 +17,7 @@
         </li>
       </ul>
       <p v-html="question.description"></p>
-    </div>   
+    </div>
     <div class="verify-answer" :class="verifyStyleClass">
       <button :class="hideVerifyButton" class="verify-btn pull-right" :disabled="checkAnswer" v-on:click="verifyAnswer">{{ $t('questionButtonVerify') }}</button>
       <div :class="feedbackStyleClass">

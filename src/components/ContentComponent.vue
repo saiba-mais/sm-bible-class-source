@@ -10,7 +10,7 @@
 
     <div class="ucb-question content-component">
       <div v-html="question.description"></div>
-    </div>   
+    </div>
     <div class="verify-answer" :class="verifyStyleClass">
       <div :class="feedbackStyleClass">
         <button class="btn-continue-lesson show" v-on:click="showNextQuestion">{{ $t('questionButtonContinue') }}</button>

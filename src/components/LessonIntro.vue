@@ -40,12 +40,15 @@ export default {
     }
   },
   created: function () {
-    console.log('https://saibamais.org.br/wp-json/saibamais/v2/lesson/' + this.currentLesson + '/students')
-    this.$http.get('https://saibamais.org.br/wp-json/saibamais/v2/lesson/' + this.currentLesson + '/students').then(response => {
+    const ID = this.currentLesson
+
+    const url = `https://cursos.saibamais.org.br/wp-json/saibamais/v2/lesson/${ID}/students`
+
+    this.$http.get(url).then(response => {
       this.$set(this, 'studentsNumber', response.body.students)
     }, response => {
       this.$set(this, 'studentsNumber', 'N/A')
-      console.log('Esta informação não pode ser acessada. Consulte o administrador do sistema para maiores informações.')
+      console.error('Esta informação não pode ser acessada. Consulte o administrador do sistema para maiores informações.')
     })
   }
 }

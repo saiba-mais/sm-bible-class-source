@@ -34,7 +34,7 @@
           <p>{{ (feedbackStyleClass === 'feedback-wrong') ? wrongAnswerCounter : $t('questionFeedbackDescriptionCorrect') }}</p>
         </div>
         <button class="btn-continue-lesson" :class="showAnswerButton" v-on:click="showNextQuestion">{{ $t('questionButtonContinue') }}</button>
-      </div> 
+      </div>
     </div>
 
     <div v-if="(fbMessengerAssistent !== null || whatsappAssistent !== null)" class="contact-teacher">

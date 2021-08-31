@@ -31,7 +31,7 @@
         <a href="#" class="ucb-try-again" v-on:click="startAgain">{{ $t('endlessonTryAgain') }}</a>
       </div>
     </div>
-    
+
     <div class="teste">
 
       <div v-if="formSuccess === false">
@@ -115,12 +115,12 @@ export default {
       fullName: null,
       telephone: null,
       email: null,
-      formSuccess: false
+      formSuccess: false,
+      progressEndPoint: this.$root.$data.progressendpoint
     }
   },
   methods: {
     checkForm: function () {
-      console.log('teste')
       this.errors = []
       if (!this.email) {
         this.errors.push('O campo de email é obrigatório.')
@@ -143,18 +143,13 @@ export default {
         lessonID: this.currentLesson,
         lessonUserAnswers: this.correctAnswerCounter
       }
-      this.$http.post('https://saibamais.org.br/wp-json/saibamais/v2/progress', formInfo).then(response => {
+      console.log(this.progressEndPoint)
+      this.$http.post(this.progressEndPoint, formInfo).then(response => {
         this.formSuccess = true
-        console.log(response.body)
+        // console.log(response.body)
       }, response => {
-        console.log(response.body)
+        console.error(response.body)
       })
-      // this.$http.post('http://localhost:3000/posts/1', formInfo).then(response => {
-      //   console.log(response.body)
-      // }, response => {
-      //   this.formSuccess = true
-      //   console.log(response.body)
-      // })
     },
     startAgain: function () {
       this.$emit('start-again')

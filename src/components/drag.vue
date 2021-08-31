@@ -27,7 +27,7 @@
     <button :class="hideVerifyButton" :disabled="!allAnswerChecked" v-on:click="verifyAnswer">Verificar</button>
     <div :class="feedbackStyleClass">
       <button  v-on:click="showNextQuestion">Continuar</button>
-    </div> 
+    </div>
   </div>
 </template>
 

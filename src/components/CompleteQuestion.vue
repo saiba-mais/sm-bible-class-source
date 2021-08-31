@@ -37,7 +37,7 @@
           <h5>{{ (feedbackStyleClass === 'feedback-right') ? $t('questionFeedbackTitleCorrect') : $t('questionFeedbackTitleWrong') }}</h5>
           <p>{{ (feedbackStyleClass === 'feedback-wrong') ?  wrongAnswerCounter : $t('questionFeedbackDescriptionCorrect') }}</p>
         </div>
-      </div> 
+      </div>
       <button class="btn-continue-lesson" :class="showAnswerButton" v-on:click="showNextQuestion">{{ $t('questionButtonContinue') }}</button>
     </div>
 
